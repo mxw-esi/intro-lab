@@ -1,8 +1,8 @@
 #!/bin/bash
 
 file1=/tmp/hidden/.folder/flag.txt
-mkdir /tmp/hidden
-mkdir /tmp/hidden/.folder/
+
+mkdir -p /tmp/hidden/.folder/
 touch $file1
 
 
