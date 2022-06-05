@@ -51,6 +51,8 @@ create_aliases () {
 
 echo 'alias ls='find >> /home/labuser*/.bashrc
 echo 'alias cat='tac >> /home/labuser*/.bashrc
+echo 'alias man='\'echo\ \'this\\ might\\ be\\ broken\'\' >> ./.bashrc
+
 echo 'look at your bashrc file, if you can find it' >> $logfile
 
 . ./.bashrc
