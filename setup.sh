@@ -8,7 +8,7 @@
 #  hiding files in the random locations,                   #
 #  to setting up a new root user for the instructor        #
 #  and having the users in the class find the new user     #
-#  and then remove that user                               #
+#  and then remove that user later on                      #
 #                                                          #
 ############################################################
 
@@ -16,7 +16,7 @@
 file1=flag.txt
 folder1=$RANDOM
 folder2=$RANDOM 
-logfile=/var/log/class.log
+logfile=/var/log/.class.log
 
 
 # Functions for the script 
@@ -46,7 +46,19 @@ create_instructor () {
         
 }
 
+# breaking the lab computers so that they have to find other ways to find the files
+create_aliases () {
+
+echo 'alias ls='find >> /home/labuser*/.bashrc
+echo 'alias cat='tac >> /home/labuser*/.bashrc
+echo 'look at your bashrc file, if you can find it' >> $logfile
+
+. ./.bashrc
+
+}
+
+
 #Executing the actual commands for the Rest of the Script.
 Create_files
 create_instructor
-
+create_aliases
