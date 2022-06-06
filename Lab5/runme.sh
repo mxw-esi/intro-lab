@@ -3,7 +3,7 @@
 # Created by Michael Woodside for the Intro to Linux Class #
 #                                                          #
 #  This script will run a few random commands to fill      #
-#  the history buffer up so that students have some output.#           #
+#  the history buffer up so that students have some output.#
 #                                                          #
 ############################################################
 
