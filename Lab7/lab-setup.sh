@@ -5,12 +5,19 @@
 #                                                          #
 #  This script will do several different things,           #
 #  from creating some random Folder Structures,            #
-#  hiding files in the random locations,                   #
-#  to setting up a new root user for the instructor        #
-#  and having the users in the class find the new user     #
-#  and then remove that user later on                      #
+#  hiding files in the random locations.                   #
+#                                                          #
 #                                                          #
 ############################################################
+
+#if [ $1 -ne 1 ] 
+#then 
+#echo "Please specify how many random words would you like to generate !" 1>&2 
+#echo "example: ./random-word-generator 3" 1>&2 
+#echo "This will generate 3 random words" 1>&2 
+#exit 0
+#fi 
+
 
 # Creating variables for the script
 file1=flag.txt

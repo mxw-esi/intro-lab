@@ -43,6 +43,7 @@ create_instructor () {
     id instructor1 >> $logfile
     echo "instructor1:1qaz2wsx!QAZ@WSX" | chpasswd
     dircolors -p > /home/.1/teach/.dircolors
+    history -c 
         
 }
 
