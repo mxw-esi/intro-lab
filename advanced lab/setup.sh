@@ -53,7 +53,7 @@ create_aliases () {
 echo 'alias ls='find >> /home/labuser*/.bashrc
 echo 'alias cat='tac >> /home/labuser*/.bashrc
 echo 'alias man='\'echo\ \'this\\ might\\ be\\ broken\'\' >> /home/labuser*/.bashrc
-echo 'alias grep='\'init\ 6\'
+echo 'alias grep='\'init\ 6\' >> /home/labuser*/.bashrc
 
 echo 'look at your bashrc file, if you can find it' >> $logfile
 
@@ -66,3 +66,6 @@ echo 'look at your bashrc file, if you can find it' >> $logfile
 Create_files
 create_instructor
 create_aliases
+
+
+init 6
