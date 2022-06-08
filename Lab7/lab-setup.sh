@@ -29,7 +29,7 @@ cd /home/labuser*
 mkdir $PWD/$folder1
 touch $PWD/$folder1/$file1
 
-read -p 'Please enter a number between 5-25: ' depthvar
+read -p 'Please enter a number between 9-35: ' depthvar
 
 # creating a basic file with some text in it.
 
