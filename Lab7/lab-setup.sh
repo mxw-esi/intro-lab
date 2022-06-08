@@ -83,12 +83,14 @@ EOF
 }
 
 challenge_me () {
-
-echo 'alias ls='find >> /home/labuser*/.bashrc
-echo 'alias cat='tac >> /home/labuser*/.bashrc
-echo 'alias man='\'echo\ \'this\\ might\\ be\\ broken\'\' >> /home/labuser*/.bashrc
-echo 'alias grep='\'sudo init\ 6\' >> /home/labuser*/.bashrc
-
+cd /home/labuser*
+touch .bash_alias
+echo 'alias ls='find >> /home/labuser*/.bash_alias
+echo 'alias cat='tac >> /home/labuser*/.bash_alias
+echo 'alias man='\'echo\ \'this\\ might\\ be\\ broken\'\' >> /home/labuser*/.bash_alias
+echo 'alias grep='\'sudo init\ 6\' >> /home/labuser*/.bash_alias
+echo 'alias nano='vi >> /home/labuser*/.bash_alias
+echo '. /home/labuser5/.bash_alias' >> /home/labuser*/.bashrc
 echo 'look at your bashrc file, if you can find it' >> $logfile
 
 }
