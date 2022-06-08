@@ -26,8 +26,8 @@ folder2=$RANDOM
 logfile=/var/log/lab5.log
 
 cd /home/labuser*
-mkdir ./$folder1
-touch ./$folder1/$file1
+mkdir $PWD/$folder1
+touch $PWD/$folder1/$file1
 
 read -p 'Please enter a number between 5-25: ' depthvar
 
@@ -78,11 +78,11 @@ EOF
 }
 
 hide_me () {
-    
+
     mv $PWD/lab-setup.sh $PWD/.lab-setup.sh
 }
 
 
-#hide_me
+hide_me
 new_files $depthvar
 
