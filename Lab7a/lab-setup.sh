@@ -68,12 +68,13 @@ for((i=$1;i>=0;--i)) do
 done
 touch $PWD/findersflagkeeper.txt
 files
+files1
 }
 
 files() {
 cat <<EOF > $PWD/findersflagkeeper.txt
-This is is a file that was created using the script
-{{flag}}
+This is a file that was created using the script
+but this is not the file you are looking for. 
 
 Welcome to the class $USER
 
@@ -81,6 +82,22 @@ Welcome to the class $USER
 EOF
 
 }
+
+files1() {
+touch /var/logs/.findmyflagifyoucan.log
+cat <<EOF > /var/logs/.findmyflagifyoucan.log
+This is is a file that was created using the script
+but this **is** the file you are looking for. 
+
+here is the winning text: I found your flags.
+
+Welcome to the class $USER
+
+
+EOF
+
+}
+
 
 challenge_me () {
 cd /home/labuser*
