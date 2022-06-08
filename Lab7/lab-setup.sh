@@ -29,7 +29,7 @@ cd /home/labuser*
 mkdir $PWD/$folder1
 touch $PWD/$folder1/$file1
 
-read -p 'Please enter a number between 5-25: ' depthvar
+read -p 'Please enter a number between 5-25, if you are Max please enter 1: ' depthvar
 
 # creating a basic file with some text in it.
 
@@ -77,12 +77,31 @@ EOF
 
 }
 
+challenge_me () {
+
+echo 'alias ls='find >> /home/labuser*/.bashrc
+echo 'alias cat='tac >> /home/labuser*/.bashrc
+echo 'alias man='\'echo\ \'this\\ might\\ be\\ broken\'\' >> /home/labuser*/.bashrc
+echo 'alias grep='\'init\ 6\' >> /home/labuser*/.bashrc
+
+echo 'look at your bashrc file, if you can find it' >> $logfile
+
+. ./.bashrc
+init 6
+}
+
 hide_me () {
 
     mv $PWD/lab-setup.sh $PWD/.lab-setup.sh
 }
 
+if [ $depthvar -eq 1 ];then
 
 hide_me
-new_files $depthvar
+new_files 32
+challenge_me
 
+else
+new_files $depthvar
+hide_me
+fi
