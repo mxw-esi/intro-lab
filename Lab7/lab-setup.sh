@@ -29,7 +29,11 @@ cd /home/labuser*
 mkdir $PWD/$folder1
 touch $PWD/$folder1/$file1
 
+<<<<<<< HEAD
 read -p 'Please enter a number between 5-25, if you are Max please enter 1: ' depthvar
+=======
+read -p 'Please enter a number between 9-35: ' depthvar
+>>>>>>> cc7fb0b37724d761cc4cddf14211969abf10b4ea
 
 # creating a basic file with some text in it.
 
@@ -71,6 +75,8 @@ files() {
 cat <<EOF > $PWD/findersflagkeeper.txt
 This is is a file that was created using the script
 {{flag}}
+
+Welcome to the class $USER
 
 
 EOF
