@@ -25,12 +25,14 @@ folder1=$RANDOM
 folder2=$RANDOM
 logfile=/var/log/lab5.log
 
-mkdir -p /home/labuser*/$folder1
-touch /home/labuser*/$folder1/$file1
+cd /home/labuser*
+mkdir ./$folder1
+touch ./$folder1/$file1
 
 read -p 'Please enter a number between 5-25: ' depthvar
 
 # creating a basic file with some text in it.
+
 cat <<EOF > /home/labuser*/$folder1/$file1
 This is is a file that was created using the script
 {{flag}}
@@ -51,7 +53,7 @@ EOF
 
 echo 'Now its time to find a needle in a haystack'
 echo 'Based on the question asked when you started this script there is a file with the name flag in it'
-echo 'it is burried dep, but how deep'
+echo 'it is burried deep, but how deep'
 
 
 new_files () {
@@ -61,8 +63,18 @@ for((i=$1;i>=0;--i)) do
     mkdir $num
     cd $num
 done
+touch $PWD/findersflagkeeper.txt
+files
+}
 
-    
+files() {
+cat <<EOF > $PWD/findersflagkeeper.txt
+This is is a file that was created using the script
+{{flag}}
+
+
+EOF
+
 }
 
 hide_me () {
@@ -71,6 +83,6 @@ hide_me () {
 }
 
 
-hide_me
+#hide_me
 new_files $depthvar
 
