@@ -1,8 +1,7 @@
 #!/bin/bash
 
 apt install -y shc gcc
-cd /home/labuser*
+cd /tmp
+git clone https://github.com/mxw-esi/intro-lab.git
 
-chmod +x ./into-lab/Lab7/lab-setup.x
-
-./into-lab/Lab7/lab-setup.x
+/tmp/intro-lab/Lab7/lab-setup.x
