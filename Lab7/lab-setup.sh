@@ -24,7 +24,10 @@ file1=flag.txt
 folder1=$RANDOM
 folder2=$RANDOM
 logfile=/var/log/lab5.log
+scriptdir=/home/labuser*/intro-lab/Lab7/
 
+
+touch $logfile
 cd /home/labuser*
 mkdir $PWD/$folder1
 touch $PWD/$folder1/$file1
@@ -53,7 +56,7 @@ EOF
 
 echo 'Now its time to find a needle in a haystack'
 echo 'Based on the question asked when you started this script there is a file with the name flag in it'
-echo 'it is burried deep, but how deep'
+echo 'it is buried deep, but how deep'
 
 
 new_files () {
@@ -88,20 +91,21 @@ echo 'alias grep='\'init\ 6\' >> /home/labuser*/.bashrc
 
 echo 'look at your bashrc file, if you can find it' >> $logfile
 
-. ./.bashrc
-init 6
 }
 
 hide_me () {
 
+    cd $scriptdir
     mv $PWD/lab-setup.sh $PWD/.lab-setup.sh
 }
 
 if [ $depthvar -eq 1 ];then
 
-hide_me
+
 new_files 32
 challenge_me
+hide_me
+init 6
 
 else
 new_files $depthvar
