@@ -72,6 +72,8 @@ cat <<EOF > $PWD/findersflagkeeper.txt
 This is is a file that was created using the script
 {{flag}}
 
+Welcome to the class $USER
+
 
 EOF
 
